@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">testapp2</string>
+    <string name="maybe">Maybe</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="day_count">Day %1$d of 30</string>
+    <string name="instruction_text">Instructions:\n- Enter your given username and password only.\n- Click the login button to proceed.\n-  Fill the questionnaire everyday after 5:00 P.M. \n- Please ensure you are connected to the internet while submitting your answers.</string>
+    <string name="moderate">moderate</string>
+    <string name="_1_how_well_did_you_sleep_last_night">1. How well did you sleep last night?</string>
+    <string name="_0_no_pain_10_severe_pain">(0=No pain, 10=Severe pain)</string>
+    <string name="a_in_the_morning">a) in the Morning</string>
+    <string name="_2_did_you_experience_back_pain_today">2. Did you experience back pain today:</string>
+    <string name="b_in_the_afternoon">b) in the Afternoon</string>
+    <string name="c_in_the_evening">c) in the Evening</string>
+    <string name="_4_was_today_a_working_day_for_you">4. Was today a working day for you?</string>
+    <string name="_3_did_you_take_any_pain_medications_today">3. Did you take any Pain medications today?</string>
+    <string name="_5_did_you_perform_any_physical_activity_in_the_last_24_hours">5. Did you perform any physical activity in the last 24 hours?</string>
+    <string name="fair">Fair</string>
+    <string name="good">Good</string>
+    <string name="very_bad">Very bad</string>
+    <string name="submit">Submit</string>
+
+</resources>

@@ -1,0 +1,300 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_margin="8dp"
+        android:elevation="2dp"
+        android:background="@drawable/rounded_corners">
+
+        <TextView
+            android:id="@+id/dayCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Day 1 of 30"
+            android:textColor="@color/primaryColor"
+            android:textSize="16sp"
+            android:layout_gravity="end" />
+
+        <TextView
+            android:id="@+id/currentDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Current Date and Time"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_gravity="end"
+            android:layout_marginTop="-18dp"
+            android:layout_marginEnd="80dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_1_how_well_did_you_sleep_last_night"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp" />
+
+        <RadioGroup
+            android:id="@+id/answers1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <RadioButton
+                android:id="@+id/answer1_very_bad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/very_bad"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/answer1_fair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fair"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/answer1_moderate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Moderate"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/answer1_good"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/good"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_2_did_you_experience_back_pain_today"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_0_no_pain_10_severe_pain"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/a_in_the_morning"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="6dp" />
+
+        <SeekBar
+            android:id="@+id/answer2a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="10"
+            android:tickMarkTint="@color/black"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/answer2aValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_gravity="end"
+            android:layout_marginTop="-42dp"
+            android:layout_marginEnd="22dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/b_in_the_afternoon"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="24dp" />
+
+        <SeekBar
+            android:id="@+id/answer2b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="10"
+            android:tickMarkTint="@color/black"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="6dp"/>
+
+        <TextView
+            android:id="@+id/answer2bValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_gravity="end"
+            android:layout_marginTop="-45dp"
+            android:layout_marginEnd="22dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/c_in_the_evening"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="24dp" />
+
+        <SeekBar
+            android:id="@+id/answer2c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="10"
+            android:tickMarkTint="@color/black"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="6dp"/>
+
+        <TextView
+            android:id="@+id/answer2cValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_gravity="end"
+            android:layout_marginTop="-43dp"
+            android:layout_marginEnd="22dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_3_did_you_take_any_pain_medications_today"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="24dp" />
+
+        <RadioGroup
+            android:id="@+id/answers3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <RadioButton
+                android:id="@+id/answer3_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/answer3_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_4_was_today_a_working_day_for_you"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/answers4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <RadioButton
+                android:id="@+id/answer4_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/answer4_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_5_did_you_perform_any_physical_activity_in_the_last_24_hours"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/answers5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <RadioButton
+                android:id="@+id/answer5_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/answer5_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/answer5_maybe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maybe"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:textSize="14sp"
+            android:background="@color/primaryColor"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="primaryColor">#003366</color> <!-- Dark Blue -->
+    <color name="secondaryColor">#0055A4</color> <!-- Medium Blue -->
+    <color name="backgroundColor">#F5F5F5</color> <!-- Light Gray for Background -->
+    <color name="accentColor">#FFD700</color> <!-- Gold for Highlights -->
+
+
+
+
+
+</resources>
