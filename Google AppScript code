@@ -1,0 +1,75 @@
+function doPost(e) {
+  try {
+    Logger.log("Event: " + JSON.stringify(e)); // Log the event object to understand what is being received
+    
+    if (!e || !e.parameter) {
+      throw new Error("Event object is null or undefined.");
+    }
+    
+    var sheet = SpreadsheetApp.openById("1nPOILIgVxf57EwXjuJt0R_LmFQ0_RxEx7r1dJOVReVQ").getActiveSheet(); // Replace with your actual spreadsheet ID
+    
+    var params = e.parameter;
+    
+    Logger.log("Params: " + JSON.stringify(params)); // Log the parameters to see what is being passed
+
+    // Define the expected parameters and provide default values for any missing ones
+    var username = params.username || "Unknown";
+    var answer1 = params.answer1 || "";
+    var answer2a = params.answer2a || "";
+    var answer2b = params.answer2b || "";
+    var answer2c = params.answer2c || "";
+    var answer3 = params.answer3 || "";
+    var answer4 = params.answer4 || "";
+    var answer5 = params.answer5 || "";
+    var timestamp = params.timestamp || "";
+    var displayDate = params.displayDate || "";
+
+    var row = [
+      username,
+      answer1,
+      answer2a,
+      answer2b,
+      answer2c,
+      answer3,
+      answer4,
+      answer5,
+      timestamp,
+      displayDate
+    ];
+
+    Logger.log("Row to process: " + row.join(', '));
+
+    var data = sheet.getDataRange().getValues();
+    var userColumnIndex = 0; // Assuming username is in the first column
+    var dateColumnIndex = 9; // Assuming displayDate is in the 10th column
+
+    // Extract the date part from displayDate
+    var newDisplayDate = new Date(displayDate).toDateString();
+
+    var submissionFound = false;
+
+    for (var i = 0; i < data.length; i++) {
+      var existingDisplayDate = new Date(data[i][dateColumnIndex]).toDateString();
+      
+      if (data[i][userColumnIndex] === username && existingDisplayDate === newDisplayDate) {
+        // Submission found for the same day, update the row
+        sheet.getRange(i + 1, 1, 1, row.length).setValues([row]);
+        submissionFound = true;
+        Logger.log("Existing submission found and updated for user: " + username + " on date: " + newDisplayDate);
+        break;
+      }
+    }
+
+    if (!submissionFound) {
+      // If no submission was found for the same day, append the new row
+      sheet.appendRow(row);
+      Logger.log("New submission added for user: " + username + " on date: " + newDisplayDate);
+    }
+
+    return ContentService.createTextOutput(JSON.stringify({"result":"success"})).setMimeType(ContentService.MimeType.JSON);
+    
+  } catch (error) {
+    Logger.log("Error: " + error.message);
+    return ContentService.createTextOutput(JSON.stringify({"result":"error", "error": error.message})).setMimeType(ContentService.MimeType.JSON);
+  }
+}
