@@ -38,14 +38,15 @@ The mobile app allows patients to self-report pain levels at different times of 
 
 ## 📦 Repository Contents
 
-App-Project/ 
-├── app/ # Main application source code 
-├── Google AppScript code/ # Backend scripts for data handling 
-├── .idea/ # IDE configuration files 
-├── build.gradle.kts # Gradle build script 
-├── settings.gradle.kts # Gradle settings 
-├── gradle.properties # Gradle properties 
-├── gradlew # Gradle wrapper ├── gradlew.bat # Gradle wrapper for Windows 
+App-Project/ <br>
+├── app/ # Main application source code <br>
+├── Google AppScript code/ # Backend scripts for data handling <br>
+├── .idea/ # IDE configuration files <br>
+├── build.gradle.kts # Gradle build script <br>
+├── settings.gradle.kts # Gradle settings <br>
+├── gradle.properties # Gradle properties <br>
+├── gradlew # Gradle wrapper <br>
+├── gradlew.bat # Gradle wrapper for Windows <br>
 └── README.md # Project documentation
 
 
